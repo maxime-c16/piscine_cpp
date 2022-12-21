@@ -6,7 +6,7 @@
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 14:37:12 by mcauchy           #+#    #+#             */
-/*   Updated: 2022/11/28 13:53:54 by mcauchy          ###   ########.fr       */
+/*   Updated: 2022/12/21 10:57:15 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,11 @@ void	PhoneBook::displayAllContacts(void)
 
 void	PhoneBook::displayContact(int i)
 {
+	if (this->_nb_contacts < i + 1)
+	{
+		std::cout << "No contact at index " << i + 1 << std::endl;
+		return ;
+	}
 	std::cout << "| " << std::setw(10) << "Index : "  << i + 1 << " | ";
 	std::cout << std::setw(10) << this->_truncate(this->_contacts[i].getFN()) << " | ";
 	std::cout << std::setw(10) << this->_truncate(this->_contacts[i].getLN()) << " | ";
@@ -76,28 +81,17 @@ void	PhoneBook::searchContact(void)
 	}
 }
 
-void	PhoneBook::addContact(void)
+void	PhoneBook::setContact(Contact elem, int index)
 {
-	Contact		elem;
-	std::string	str;
+	this->_contacts[index] = elem;
+}
 
-	std::cout << "First name: ";
-	std::cin >> str;
-	elem.setFN(str);
-	std::cout << "Last name: ";
-	std::cin >> str;
-	elem.setLN(str);
-	std::cout << "Nickname: ";
-	std::cin >> str;
-	elem.setNN(str);
-	std::cout << "Phone number: ";
-	std::cin >> str;
-	elem.setPN(str);
-	std::cout << "Darkest secret: ";
-	std::cin >> str;
-	elem.setDS(str);
-	this->_contacts[this->_index] = elem;
+void	PhoneBook::addContact(Contact elem)
+{
+	this->setContact(elem, this->_index);
 	this->_nb_contacts = (this->_nb_contacts < 8) ? this->_nb_contacts + 1 : this->_nb_contacts;
+	if (!this->_is_full)
+		this->_is_full = (this->_index == 7) ? 1 : 0;
 	this->_index = (this->_index + 1) % 8;
 }
 

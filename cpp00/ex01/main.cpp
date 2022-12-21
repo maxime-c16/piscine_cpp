@@ -6,7 +6,7 @@
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 14:32:35 by mcauchy           #+#    #+#             */
-/*   Updated: 2022/11/28 13:59:13 by mcauchy          ###   ########.fr       */
+/*   Updated: 2022/12/21 10:44:58 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@ int	main(void)
 {
 	PhoneBook	phonebook;
 	int			index;
+	Contact		contact;
+	std::string	first_name;
+	std::string	last_name;
+	std::string	nickname;
+	std::string	phone_number;
+	std::string	darkest_secret;
 
 	std::cout << "Welcome to the PhoneBook" << std::endl;
 	std::cout << "Please enter a command (ADD, SEARCH, EXIT)" << std::endl;
@@ -25,7 +31,24 @@ int	main(void)
 		std::cout << "Enter a command: ";
 		std::cin >> command;
 		if (command == "ADD")
-			phonebook.addContact();
+		{
+			std::cout << "Enter first name: ";
+			std::cin >> first_name;
+			contact.setFN(first_name);
+			std::cout << "Enter last name: ";
+			std::cin >> last_name;
+			contact.setLN(last_name);
+			std::cout << "Enter nickname: ";
+			std::cin >> nickname;
+			contact.setNN(nickname);
+			std::cout << "Enter phone number: ";
+			std::cin >> phone_number;
+			contact.setPN(phone_number);
+			std::cout << "Enter darkest secret: ";
+			std::cin >> darkest_secret;
+			contact.setDS(darkest_secret);
+			phonebook.addContact(contact);
+		}
 		else if (command == "SEARCH")
 		{
 			phonebook.displayAllContacts();
@@ -40,8 +63,6 @@ int	main(void)
 		}
 		else if (command == "EXIT")
 			break ;
-		else
-			std::cout << "Invalid command" << std::endl;
 	}
 	return (0);
 }

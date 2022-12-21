@@ -6,7 +6,7 @@
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 14:35:03 by mcauchy           #+#    #+#             */
-/*   Updated: 2022/11/28 13:49:27 by mcauchy          ###   ########.fr       */
+/*   Updated: 2022/12/21 10:36:23 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,13 @@ class PhoneBook
 {
 	public:
 
-		void	addContact(void);
-		void	delContact(int index);
+		void	addContact(Contact elem);
+		// void	delContact(int index);
 		void	searchContact(void);
 		void	displayContact(int index);
 		void	displayAllContacts(void);
+
+		void	setContact(Contact contact, int index);
 
 		PhoneBook(void);
 		~PhoneBook(void);
