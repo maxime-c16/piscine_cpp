@@ -5,22 +5,22 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/12/21 17:21:52 by mcauchy           #+#    #+#              #
-#    Updated: 2022/12/21 17:21:53 by mcauchy          ###   ########.fr        #
+#    Created: 2022/12/21 17:11:09 by mcauchy           #+#    #+#              #
+#    Updated: 2022/12/21 17:25:59 by mcauchy          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	=	main.cpp PhoneBook.cpp Contact.cpp
+SRCS	=	main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 
-OBJS	=	$(SRCS:.cpp=.o)
-
-NAME	=	phonebook
+OBJS 	= 	$(SRCS:.cpp=.o)
 
 CC		=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98 -g3 -fsanitize=address
 
 RM		=	/bin/rm -rf
+
+NAME	=	zombie
 
 all		:	$(NAME)
 

@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/25 14:35:03 by mcauchy           #+#    #+#             */
-/*   Updated: 2022/12/21 17:07:13 by mcauchy          ###   ########.fr       */
+/*   Created: 2022/12/21 21:34:15 by mcauchy           #+#    #+#             */
+/*   Updated: 2022/12/21 22:24:18 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
+#ifndef WEAPON_HPP
 
-# define PHONEBOOK_HPP
+# define WEAPON_HPP
 
-# include "Contact.hpp"
+# include <iostream>
+# include <string>
+# include <iomanip>
 
-class PhoneBook
+class	Weapon
 {
 	public:
 
-		void	addContact(Contact elem);
-		void	searchContact(void);
-		void	displayContact(int index);
-		void	displayAllContacts(void);
-		void	setContact(Contact contact, int index);
+		std::string	&getType( void );
+		void		setType( std::string type );
 
-		PhoneBook(void);
-		~PhoneBook(void);
+		Weapon( std::string type );
+		~Weapon( void );
 
 	private:
-
-		static int	_nb_contacts;
-		Contact		_contacts[8];
-		int			_index;
-		int			_is_full;
-		std::string	_truncate(std::string str) const;
+		std::string	_type;
 };
 
 #endif

@@ -1,41 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/25 14:35:03 by mcauchy           #+#    #+#             */
-/*   Updated: 2022/12/21 17:07:13 by mcauchy          ###   ########.fr       */
+/*   Created: 2022/12/21 17:01:45 by mcauchy           #+#    #+#             */
+/*   Updated: 2022/12/21 18:12:47 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
+#ifndef ZOMBIE_HPP
 
-# define PHONEBOOK_HPP
+# define ZOMBIE_HPP
 
-# include "Contact.hpp"
+# include <iostream>
+# include <string>
+# include <iomanip>
 
-class PhoneBook
+class	Zombie
 {
 	public:
 
-		void	addContact(Contact elem);
-		void	searchContact(void);
-		void	displayContact(int index);
-		void	displayAllContacts(void);
-		void	setContact(Contact contact, int index);
+		void	announce( void ) const;
+		Zombie	*zombieHorde( int N, std::string name );
+		void	setName( std::string name );
 
-		PhoneBook(void);
-		~PhoneBook(void);
+		Zombie( std::string name );
+		~Zombie( void );
 
 	private:
 
-		static int	_nb_contacts;
-		Contact		_contacts[8];
-		int			_index;
-		int			_is_full;
-		std::string	_truncate(std::string str) const;
+		Zombie( void );
+		std::string	_name;
 };
 
 #endif
