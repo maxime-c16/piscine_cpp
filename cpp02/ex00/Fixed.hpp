@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   header.hpp                                         :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/25 14:33:17 by mcauchy           #+#    #+#             */
-/*   Updated: 2022/12/29 10:49:09 by mcauchy          ###   ########.fr       */
+/*   Created: 2022/12/28 15:53:17 by mcauchy           #+#    #+#             */
+/*   Updated: 2022/12/28 18:41:18 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADER_HPP
+#ifndef FIXED_HPP
 
-# define HEADER_HPP
-
-# define INT_MAX 2147483647
+# define FIXED_HPP
 
 # include <iostream>
-# include <string>
-# include <iomanip>
-# include <limits>
-# include "PhoneBook.hpp"
-# include "Contact.hpp"
+# include <cmath>
+
+class Fixed
+{
+	public:
+
+		Fixed( void );
+		Fixed( Fixed &ref );
+		~Fixed( void );
+
+		Fixed	&operator=( Fixed const &ref );
+		int		getRawBits( void ) const;
+		void	setRawBits( int const raw );
+
+	private:
+
+		int					_fixed;
+		static const int	_nbBits = 8;
+};
 
 #endif

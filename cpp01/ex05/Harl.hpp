@@ -1,26 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   header.hpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/25 14:33:17 by mcauchy           #+#    #+#             */
-/*   Updated: 2022/12/29 10:49:09 by mcauchy          ###   ########.fr       */
+/*   Created: 2022/12/27 11:58:43 by mcauchy           #+#    #+#             */
+/*   Updated: 2022/12/27 12:37:16 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADER_HPP
+#ifndef HARL_HPP
 
-# define HEADER_HPP
-
-# define INT_MAX 2147483647
+# define HARL_HPP
 
 # include <iostream>
 # include <string>
 # include <iomanip>
 # include <limits>
-# include "PhoneBook.hpp"
-# include "Contact.hpp"
+# include <map>
+
+class Harl
+{
+	public:
+
+		void	complain( std::string level );
+		std::map<std::string, void (Harl::*)()>	function_map;
+
+		Harl( void );
+		~Harl( void );
+
+	private:
+
+		void	debug( void );
+		void	info( void );
+		void	warning( void );
+		void	error( void );
+};
 
 #endif

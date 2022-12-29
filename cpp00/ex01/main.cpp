@@ -6,7 +6,7 @@
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 14:32:35 by mcauchy           #+#    #+#             */
-/*   Updated: 2022/12/21 10:44:58 by mcauchy          ###   ########.fr       */
+/*   Updated: 2022/12/29 10:48:37 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	main(void)
 			while (!(std::cin >> index) || index > 8 || index < 1)
 			{
 				std::cin.clear();
-				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+				std::cin.ignore(INT_MAX, '\n');
 				std::cout << "Invalid index, please enter a valid index: ";
 			}
 			phonebook.displayContact(index - 1);
