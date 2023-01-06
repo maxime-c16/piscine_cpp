@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/28 15:53:17 by mcauchy           #+#    #+#             */
-/*   Updated: 2023/01/05 11:25:29 by mcauchy          ###   ########.fr       */
+/*   Created: 2023/01/05 21:49:11 by mcauchy           #+#    #+#             */
+/*   Updated: 2023/01/05 22:05:09 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
+#ifndef WRONGANIMAL_HPP
 
-# define FIXED_HPP
+# define WRONGANIMAL_HPP
 
 # include <iostream>
-# include <cmath>
+# include <string>
 
-class Fixed
+class WrongAnimal
 {
 	public:
+		WrongAnimal( void );
+		WrongAnimal( std::string type );
+		WrongAnimal( WrongAnimal const &ref );
+		virtual ~WrongAnimal( void );
 
-		Fixed( void );
-		Fixed( Fixed &ref );
-		 ~Fixed( void );
+		WrongAnimal	&operator=( WrongAnimal const &ref );
 
-		Fixed	&operator=( Fixed const &ref );
-		int		getRawBits( void ) const;
-		void	setRawBits( int const raw );
+		virtual void	makeSound( void ) const;
 
-	private:
+		std::string	getType( void ) const;
 
-		int					_fixed;
-		static const int	_nbBits = 8;
+	protected:
+		std::string	_type;
 };
 
 #endif

@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/28 15:53:17 by mcauchy           #+#    #+#             */
-/*   Updated: 2023/01/05 11:25:29 by mcauchy          ###   ########.fr       */
+/*   Created: 2022/12/31 11:48:38 by mcauchy           #+#    #+#             */
+/*   Updated: 2022/12/31 11:53:43 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
+#include "ClapTrap.hpp"
 
-# define FIXED_HPP
-
-# include <iostream>
-# include <cmath>
-
-class Fixed
+int main( void )
 {
-	public:
+	ClapTrap clapTrap("Fred");
 
-		Fixed( void );
-		Fixed( Fixed &ref );
-		 ~Fixed( void );
+	// Test attack
+	clapTrap.attack("Bob");
+	clapTrap.attack("Alice");
 
-		Fixed	&operator=( Fixed const &ref );
-		int		getRawBits( void ) const;
-		void	setRawBits( int const raw );
+	// Test takeDamage
+	clapTrap.takeDamage(5);
+	clapTrap.takeDamage(10);
 
-	private:
+	// Test beRepaired
+	clapTrap.beRepaired(10);
+	clapTrap.beRepaired(5);
 
-		int					_fixed;
-		static const int	_nbBits = 8;
-};
+	// Test energy points
+	for (int i = 0; i < 10; i++)
+		clapTrap.attack("Bob");
 
-#endif
+  return (0);
+}

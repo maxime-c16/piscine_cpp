@@ -1,38 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/28 15:53:17 by mcauchy           #+#    #+#             */
-/*   Updated: 2023/01/05 11:25:29 by mcauchy          ###   ########.fr       */
+/*   Created: 2023/01/05 14:31:14 by mcauchy           #+#    #+#             */
+/*   Updated: 2023/01/05 15:48:45 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
+#ifndef DIAMONDTRAP_HPP
 
-# define FIXED_HPP
+# define DIAMONDTRAP_HPP
 
 # include <iostream>
-# include <cmath>
+# include <string>
+# include "ScavTrap.hpp"
+# include "FragTrap.hpp"
 
-class Fixed
+class DiamondTrap : public ScavTrap, public FragTrap
 {
 	public:
 
-		Fixed( void );
-		Fixed( Fixed &ref );
-		 ~Fixed( void );
+	DiamondTrap( void );
+	DiamondTrap( std::string name );
+	DiamondTrap( DiamondTrap const &ref );
+	~DiamondTrap( void );
 
-		Fixed	&operator=( Fixed const &ref );
-		int		getRawBits( void ) const;
-		void	setRawBits( int const raw );
+	DiamondTrap	&operator=( DiamondTrap const &ref );
+
+	void	whoAmI( void );
+	void	attack( std::string const &target );
 
 	private:
 
-		int					_fixed;
-		static const int	_nbBits = 8;
+	std::string	_name;
+
 };
 
 #endif

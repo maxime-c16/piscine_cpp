@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/28 15:53:17 by mcauchy           #+#    #+#             */
-/*   Updated: 2023/01/05 11:25:29 by mcauchy          ###   ########.fr       */
+/*   Created: 2023/01/05 21:43:33 by mcauchy           #+#    #+#             */
+/*   Updated: 2023/01/05 22:01:40 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
+#ifndef CAT_HPP
 
-# define FIXED_HPP
+# define CAT_HPP
 
-# include <iostream>
-# include <cmath>
+# include "Animal.hpp"
 
-class Fixed
+class Cat : public Animal
 {
 	public:
+		Cat( void );
+		Cat( std::string type );
+		Cat( Cat const &ref );
+		~Cat( void );
 
-		Fixed( void );
-		Fixed( Fixed &ref );
-		 ~Fixed( void );
+		Cat	&operator=( Cat const &ref );
 
-		Fixed	&operator=( Fixed const &ref );
-		int		getRawBits( void ) const;
-		void	setRawBits( int const raw );
-
-	private:
-
-		int					_fixed;
-		static const int	_nbBits = 8;
+		virtual void	makeSound( void ) const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 15:53:17 by mcauchy           #+#    #+#             */
-/*   Updated: 2022/12/30 14:34:34 by mcauchy          ###   ########.fr       */
+/*   Updated: 2023/01/05 11:25:29 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Fixed
 		Fixed( Fixed const &ref );
 		Fixed( int const value );
 		Fixed( float const value );
-		~Fixed( void );
+		 ~Fixed( void );
 
 		Fixed	&operator=( Fixed const &ref );
 
