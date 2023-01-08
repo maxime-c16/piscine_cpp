@@ -60,6 +60,14 @@
 		"variant": "cpp",
 		"vector": "cpp",
 		"algorithm": "cpp",
-		"concepts": "cpp"
+		"concepts": "cpp",
+		"*.tcc": "cpp",
+		"deque": "cpp",
+		"functional": "cpp",
+		"iterator": "cpp",
+		"map": "cpp",
+		"memory_resource": "cpp",
+		"utility": "cpp",
+		"fstream": "cpp"
 	}
 }
