@@ -6,7 +6,7 @@
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 00:22:33 by mcauchy           #+#    #+#             */
-/*   Updated: 2023/01/08 00:34:14 by mcauchy          ###   ########.fr       */
+/*   Updated: 2023/01/08 12:32:40 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@
 # include <iostream>
 # include <string>
 # include <stdexcept>
+
 # include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {

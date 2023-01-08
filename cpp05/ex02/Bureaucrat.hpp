@@ -6,7 +6,7 @@
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:58:09 by mcauchy           #+#    #+#             */
-/*   Updated: 2023/01/08 12:32:51 by mcauchy          ###   ########.fr       */
+/*   Updated: 2023/01/08 12:41:57 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 # include <string>
 # include <stdexcept>
 
-# include "Form.hpp"
+# include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -52,7 +52,7 @@ class Bureaucrat
 		int				getGrade( void ) const;
 		void			incrementGrade( void );
 		void			decrementGrade( void );
-		void			signForm( Form &ref ) const;
+		void			signForm( AForm &ref ) const;
 
 	private:
 		std::string const	_name;

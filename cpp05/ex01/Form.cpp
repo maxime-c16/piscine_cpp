@@ -6,7 +6,7 @@
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 00:22:24 by mcauchy           #+#    #+#             */
-/*   Updated: 2023/01/08 00:43:33 by mcauchy          ###   ########.fr       */
+/*   Updated: 2023/01/08 12:34:03 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,11 @@ void	Form::beSigned( Bureaucrat const &bureaucrat )
 		throw Form::GradeTooLowException();
 	else
 		this->_signed = true;
+}
+
+std::ostream	&operator<<( std::ostream &o, Form const &ref )
+{
+	o << "Form " << ref.getName() << " is " << (ref.getSigned() ? "signed" : "unsigned") << ", grade to sign is " << ref.getGradeToSign() << ", grade to execute is " << ref.getGradeToExecute() << std::endl;
+	return (o);
 }
 
