@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/08 12:52:43 by mcauchy           #+#    #+#             */
-/*   Updated: 2023/01/09 07:41:53 by mcauchy          ###   ########.fr       */
+/*   Created: 2023/01/08 13:51:10 by mcauchy           #+#    #+#             */
+/*   Updated: 2023/01/08 13:52:59 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_HPP
+#ifndef ROBOTOMYREQUESTFORM_HPP
 
-# define SHRUBBERYCREATIONFORM_HPP
+# define ROBOTOMYREQUESTFORM_HPP
 
 # include "AForm.hpp"
 
-class ShrubberyCreationForm : public AForm
+class RobotomyRequestForm : public AForm
 {
 	public:
-		ShrubberyCreationForm(std::string target);
-		ShrubberyCreationForm(const ShrubberyCreationForm	&other);
-		~ShrubberyCreationForm( void );
+		RobotomyRequestForm(std::string target);
+		RobotomyRequestForm(const RobotomyRequestForm &other);
+		~RobotomyRequestForm( void );
 
-		ShrubberyCreationForm	&operator=(const ShrubberyCreationForm	&other);
+		RobotomyRequestForm	&operator=(const RobotomyRequestForm &ref);
 
 		void execute(const Bureaucrat& executor) const;
 
@@ -37,11 +37,10 @@ class ShrubberyCreationForm : public AForm
 		};
 
 	private:
-		ShrubberyCreationForm( void );
-
-		std::string generateRandomTree( void ) const;
+		RobotomyRequestForm( void );
 
 		std::string _target;
+
 };
 
 #endif

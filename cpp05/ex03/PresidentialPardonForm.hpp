@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/08 12:52:43 by mcauchy           #+#    #+#             */
-/*   Updated: 2023/01/09 07:41:53 by mcauchy          ###   ########.fr       */
+/*   Created: 2023/01/08 13:57:48 by mcauchy           #+#    #+#             */
+/*   Updated: 2023/01/08 13:59:18 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_HPP
+#ifndef PRESIDENTIALPARDONFORM_HPP
 
-# define SHRUBBERYCREATIONFORM_HPP
+# define PRESIDENTIALPARDONFORM_HPP
 
 # include "AForm.hpp"
 
-class ShrubberyCreationForm : public AForm
+class PresidentialPardonForm : public AForm
 {
 	public:
-		ShrubberyCreationForm(std::string target);
-		ShrubberyCreationForm(const ShrubberyCreationForm	&other);
-		~ShrubberyCreationForm( void );
+		PresidentialPardonForm(std::string target);
+		PresidentialPardonForm(const PresidentialPardonForm &other);
+		~PresidentialPardonForm( void );
 
-		ShrubberyCreationForm	&operator=(const ShrubberyCreationForm	&other);
+		PresidentialPardonForm	&operator=(const PresidentialPardonForm &ref);
 
 		void execute(const Bureaucrat& executor) const;
 
@@ -37,9 +37,7 @@ class ShrubberyCreationForm : public AForm
 		};
 
 	private:
-		ShrubberyCreationForm( void );
-
-		std::string generateRandomTree( void ) const;
+		PresidentialPardonForm( void );
 
 		std::string _target;
 };

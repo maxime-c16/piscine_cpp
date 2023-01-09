@@ -6,7 +6,7 @@
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 12:52:45 by mcauchy           #+#    #+#             */
-/*   Updated: 2023/01/09 09:06:38 by mcauchy          ###   ########.fr       */
+/*   Updated: 2023/01/09 09:07:13 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,5 +105,6 @@ std::string ShrubberyCreationForm::generateRandomTree( void ) const
 
 		tree += "\n";
 	}
+
 	return (tree);
 }
