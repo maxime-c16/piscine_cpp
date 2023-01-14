@@ -6,11 +6,11 @@
 #    By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/21 17:11:09 by mcauchy           #+#    #+#              #
-#    Updated: 2023/01/14 19:23:05 by mcauchy          ###   ########.fr        #
+#    Updated: 2023/01/14 21:24:51 by mcauchy          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	=	main.cpp Base.cpp A.cpp B.cpp C.cpp
+SRCS	=	main.cpp
 
 OBJS 	= 	$(SRCS:.cpp=.o)
 

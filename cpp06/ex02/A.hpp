@@ -6,7 +6,7 @@
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 19:25:30 by mcauchy           #+#    #+#             */
-/*   Updated: 2023/01/14 19:25:38 by mcauchy          ###   ########.fr       */
+/*   Updated: 2023/01/14 21:24:03 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@
 
 # include "Base.hpp"
 
-class A : public ABase {};
+class A : public Base {};
 
 #endif
