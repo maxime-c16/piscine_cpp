@@ -56,7 +56,7 @@ int main()
 	}
 
 	std::cout << std::endl << *rrf << std::endl;
-	
+
 	AForm* scf = intern.makeForm(SHRUBBERY_CREATION_FORM, "office");
 
 	std::cout << std::endl << *scf << std::endl;
@@ -135,6 +135,10 @@ int main()
 	{
 		std::cout << std::endl << e.what() << std::endl;
 	}
+
+	delete rrf;
+	delete scf;
+	delete ppf;
 
 	return 0;
 }

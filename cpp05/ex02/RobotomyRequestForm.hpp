@@ -6,7 +6,7 @@
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 13:51:10 by mcauchy           #+#    #+#             */
-/*   Updated: 2023/01/08 13:52:59 by mcauchy          ###   ########.fr       */
+/*   Updated: 2023/01/15 12:43:24 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class RobotomyRequestForm : public AForm
 	public:
 		RobotomyRequestForm(std::string target);
 		RobotomyRequestForm(const RobotomyRequestForm &other);
-		~RobotomyRequestForm( void );
+		virtual ~RobotomyRequestForm( void );
 
 		RobotomyRequestForm	&operator=(const RobotomyRequestForm &ref);
 

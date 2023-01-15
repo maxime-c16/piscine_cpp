@@ -6,7 +6,7 @@
 #    By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/21 17:11:09 by mcauchy           #+#    #+#              #
-#    Updated: 2023/01/09 08:23:36 by mcauchy          ###   ########.fr        #
+#    Updated: 2023/01/15 12:42:13 by mcauchy          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ $(NAME)	:	$(OBJS)
 			$(CC) $(CFLAGS) -c $< -o $@
 
 clean	:
-			$(RM) $(OBJS)
+			$(RM) $(OBJS) *_shrubbery
 
 fclean	:	clean
 			$(RM) $(NAME)

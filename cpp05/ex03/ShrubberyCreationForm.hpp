@@ -6,7 +6,7 @@
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 12:52:43 by mcauchy           #+#    #+#             */
-/*   Updated: 2023/01/09 07:41:53 by mcauchy          ###   ########.fr       */
+/*   Updated: 2023/01/15 12:40:05 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class ShrubberyCreationForm : public AForm
 	public:
 		ShrubberyCreationForm(std::string target);
 		ShrubberyCreationForm(const ShrubberyCreationForm	&other);
-		~ShrubberyCreationForm( void );
+		virtual ~ShrubberyCreationForm( void );
 
 		ShrubberyCreationForm	&operator=(const ShrubberyCreationForm	&other);
 

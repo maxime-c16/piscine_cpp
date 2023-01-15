@@ -6,7 +6,7 @@
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 12:42:19 by mcauchy           #+#    #+#             */
-/*   Updated: 2023/01/14 21:23:33 by mcauchy          ###   ########.fr       */
+/*   Updated: 2023/01/15 12:43:10 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class AForm
 		AForm( void );
 		AForm( std::string name, int gradeToSign, int gradeToExecute );
 		AForm( AForm const &ref );
-		~AForm( void );
+		virtual ~AForm( void );
 
 		AForm			&operator=( AForm const &ref );
 

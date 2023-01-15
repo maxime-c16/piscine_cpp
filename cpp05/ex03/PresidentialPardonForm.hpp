@@ -6,7 +6,7 @@
 /*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 13:57:48 by mcauchy           #+#    #+#             */
-/*   Updated: 2023/01/08 13:59:18 by mcauchy          ###   ########.fr       */
+/*   Updated: 2023/01/15 12:39:54 by mcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class PresidentialPardonForm : public AForm
 	public:
 		PresidentialPardonForm(std::string target);
 		PresidentialPardonForm(const PresidentialPardonForm &other);
-		~PresidentialPardonForm( void );
+		virtual ~PresidentialPardonForm( void );
 
 		PresidentialPardonForm	&operator=(const PresidentialPardonForm &ref);
 
