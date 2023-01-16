@@ -6,11 +6,11 @@
 #    By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/21 17:11:09 by mcauchy           #+#    #+#              #
-#    Updated: 2023/01/15 22:35:04 by mcauchy          ###   ########.fr        #
+#    Updated: 2023/01/16 09:36:43 by mcauchy          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	=	main.cpp Span.cpp
+SRCS	=	main.cpp
 
 OBJS 	= 	$(SRCS:.cpp=.o)
 
@@ -20,7 +20,7 @@ CFLAGS	=	-Wall -Wextra -Werror -std=c++98 -g3
 
 RM		=	/bin/rm -rf
 
-NAME	=	span
+NAME	=	mutantStack
 
 all		:	$(NAME)
 
