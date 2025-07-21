@@ -6,7 +6,7 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 11:58:16 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/20 16:31:59 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/07/21 14:24:01 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	search(const Phonebook &phonebook)
 		}
 		else
 		{
-			phonebook.displayContacts(index - 1);
+			phonebook.displayFullContacts(index - 1);
 			return ;
 		}
 	}
@@ -117,14 +117,5 @@ int	main( void )
 			std::cout << "Unknown command. Please try again." << std::endl;
 		}
 	}
-
-	std::cout << "\n=== KEY LEARNINGS ===" << std::endl;
-	std::cout << "• Classes encapsulate data and behavior (Contact has private members)" << std::endl;
-	std::cout << "• Arrays of objects (Contact _contacts[8]) store multiple instances" << std::endl;
-	std::cout << "• Getters/Setters provide controlled access to private data" << std::endl;
-	std::cout << "• Input validation prevents crashes from invalid user input" << std::endl;
-	std::cout << "• Circular buffer concept (index wrapping with % operator)" << std::endl;
-	std::cout << "• Static members (_nbContacts) are shared across all instances" << std::endl;
-
 	return (0);
 }

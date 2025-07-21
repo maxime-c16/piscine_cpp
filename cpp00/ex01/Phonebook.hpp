@@ -6,7 +6,7 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 11:22:53 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/20 13:08:20 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/07/21 14:17:40 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Phonebook
 		void	searchContact( void ) const;
 		void	displayContacts( int index ) const;
 		void	displayAllContacts( void ) const;
+		void	displayFullContacts( int index ) const;
 		void	setContact( int index, const Contact &contact );
 		int		getCurrentIndex( void ) const;
 

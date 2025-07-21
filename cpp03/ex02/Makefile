@@ -5,18 +5,28 @@
 #                                                     +:+ +:+         +:+      #
 #    By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/07/20 13:33:06 by macauchy          #+#    #+#              #
-#    Updated: 2025/07/21 14:28:41 by macauchy         ###   ########.fr        #
+#    Created: 2025/07/21 09:31:16 by macauchy          #+#    #+#              #
+#    Updated: 2025/07/21 12:33:31 by macauchy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	=	Account.cpp tests.cpp
+FILES			=	main.cpp ClapTrap.cpp ScavTrap.cpp
 
-HEADER	=	Account.hpp
+HEADER			=	ClapTrap.hpp ScavTrap.hpp
+
+HEADER_DIR		=	include
+
+HEADER_FILES	=	$(addprefix $(HEADER_DIR)/, $(HEADER))
+
+SRC_DIR	=	src
+
+SRCS	=	$(addprefix $(SRC_DIR)/, $(FILES))
 
 OBJ_DIR	=	.obj
 
-OBJS	=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
+OBJS	=	$(addprefix $(OBJ_DIR)/, $(FILES:.cpp=.o))
+
+NAME	=	ClapTrap
 
 CC		=	c++
 
@@ -24,14 +34,12 @@ CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 RM		=	rm -rf
 
-NAME	=	tests
-
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
-$(OBJ_DIR)/%.o: %.cpp $(HEADER)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(HEADER_FILES)
 	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 

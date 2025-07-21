@@ -6,7 +6,7 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 11:28:26 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/20 11:31:51 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/07/21 14:19:29 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 Contact::Contact( void )
 {
-	std::cout << "Contact constructor called." << std::endl;
 }
 
 Contact::~Contact( void )
 {
-	std::cout << "Contact destructor called." << std::endl;
 }
 
 void Contact::setFirstName(const std::string &firstName)

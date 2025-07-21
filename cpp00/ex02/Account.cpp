@@ -6,11 +6,13 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:32:56 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/20 13:40:35 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/07/21 14:25:22 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
+#include <ctime>
+#include <iomanip>
 
 Account::Account( int initial_deposit ) : _accountIndex(_nbAccounts++), _amount(initial_deposit), _nbDeposits(0), _nbWithdrawals(0)
 {
@@ -105,9 +107,14 @@ void Account::displayStatus( void ) const
 
 void Account::_displayTimestamp( void )
 {
-	std::time_t now = std::time(nullptr);
+	std::time_t now = std::time(0);
 	std::tm *tm = std::localtime(&now);
-	std::cout << "[" << std::put_time(tm, "%Y%m%d_%H%M%S") << "] ";
+	std::cout << "[" << (1900 + tm->tm_year);
+	std::cout << std::setfill('0') << std::setw(2) << (1 + tm->tm_mon);
+	std::cout << std::setfill('0') << std::setw(2) << tm->tm_mday << "_";
+	std::cout << std::setfill('0') << std::setw(2) << tm->tm_hour;
+	std::cout << std::setfill('0') << std::setw(2) << tm->tm_min;
+	std::cout << std::setfill('0') << std::setw(2) << tm->tm_sec << "] ";
 }
 
 int Account::_nbAccounts = 0;
