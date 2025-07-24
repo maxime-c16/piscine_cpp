@@ -6,7 +6,7 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:53:23 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/20 16:31:59 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/07/24 12:04:52 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,5 @@ int	main( void )
 	std::cout << C_CYAN "Persistent Zombie still exists." C_RESET << std::endl;
 	persistentZombie->announce();
 	delete persistentZombie;
-
-	std::cout << C_CYAN "\n=== KEY LEARNINGS ===" C_RESET << std::endl;
-	std::cout << C_GREEN "• newZombie() creates zombies on HEAP - use when you need persistence" C_RESET << std::endl;
-	std::cout << C_GREEN "• randomChump() creates zombies on STACK - use for temporary objects" C_RESET << std::endl;
-	std::cout << C_GREEN "• Heap objects persist until explicitly deleted with 'delete'" C_RESET << std::endl;
-	std::cout << C_GREEN "• Stack objects are automatically destroyed when leaving scope" C_RESET << std::endl;
-	std::cout << C_RED "• ALWAYS delete heap-allocated objects to prevent memory leaks!" C_RESET << std::endl;
-
 	return 0;
 }

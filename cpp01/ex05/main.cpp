@@ -6,7 +6,7 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 17:16:13 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/20 17:25:14 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/07/23 14:54:05 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,13 +64,5 @@ int	main( void )
 		if (!userLevel.empty())
 			harl.complain(userLevel);
 	}
-
-	std::cout << C_CYAN << "\n=== KEY LEARNINGS ===" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• Function pointers: Using member function pointers in C++" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• std::map: Associating strings with function pointers" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• Dynamic dispatch: Calling functions based on runtime input" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• Encapsulation: Private methods accessed through public interface" << C_RESET << std::endl;
-	std::cout << C_RED << "• Alternative to switch/if-else chains for cleaner code" << C_RESET << std::endl;
-
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 14:07:06 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/20 16:31:59 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/07/24 12:04:55 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,5 @@ int main( void )
 	{
 		std::cout << C_RED "No zombies created due to N being zero." C_RESET << std::endl;
 	}
-
-	std::cout << C_CYAN "\n=== KEY LEARNINGS ===" C_RESET << std::endl;
-	std::cout << C_GREEN "• Array allocation uses 'new[]' and deallocation uses 'delete[]'" C_RESET << std::endl;
-	std::cout << C_GREEN "• Default constructor is needed when creating arrays of objects" C_RESET << std::endl;
-	std::cout << C_GREEN "• setName() allows modification after object creation" C_RESET << std::endl;
-	std::cout << C_GREEN "• Always validate input parameters (N > 0)" C_RESET << std::endl;
-	std::cout << C_RED "• Memory leak prevention: delete[] must match new[]" C_RESET << std::endl;
-
 	return 0;
 }
