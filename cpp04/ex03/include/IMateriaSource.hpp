@@ -6,7 +6,7 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 15:21:27 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/24 16:01:47 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/07/25 11:34:46 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <string>
 
-// Forward declaration to avoid circular dependency
 class AMateria;
 
 class IMateriaSource

@@ -1,26 +1,12 @@
-/* **************************************************	{
-		IMateriaSource* src = new MateriaSource();
-		
-		// Create materias and save pointers for cleanup
-		AMateria* iceTemplate = new Ice();
-		AMateria* cureTemplate = new Cure();
-		
-		src->learnMateria(iceTemplate);
-		src->learnMateria(cureTemplate);
-		
-		// Clean up original templates (learnMateria clones them)
-		delete iceTemplate;
-		delete cureTemplate;
-		
-		ICharacter* me = new Character("me");****************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/24 16:00:00 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/24 16:15:55 by macauchy         ###   ########.fr       */
+/*   Created: 2025/07/25 11:36:01 by macauchy          #+#    #+#             */
+/*   Updated: 2025/07/25 11:36:56 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +41,6 @@ static void printSection(const std::string& section) {
 
 int main()
 {
-	std::cout << BOLD << CYAN << "MATERIA SYSTEM VALIDATION" << RESET << std::endl;
-	std::cout << "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" << std::endl;
-
 	printHeader("SUBJECT COMPLIANCE", 1);
 	{
 		printSection("Standard usage scenario from subject requirements");
@@ -203,9 +186,5 @@ int main()
 		printStatus("No dangling pointers detected");
 		printStatus("Proper cleanup on destruction");
 	}
-
-	std::cout << BOLD << GREEN << "\nVALIDATION COMPLETE: All systems operational" << RESET << std::endl;
-	std::cout << "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" << std::endl;
-
 	return 0;
 }

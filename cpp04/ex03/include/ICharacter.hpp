@@ -6,7 +6,7 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 12:31:27 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/24 16:01:35 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/07/25 11:34:40 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <iostream>
 # include <string>
 
-// Forward declaration to avoid circular dependency
 class AMateria;
 
 class	ICharacter
