@@ -6,7 +6,7 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 09:52:54 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/21 12:03:37 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/08/12 14:43:56 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,12 +71,5 @@ int	main( void )
 	
 	std::cout << C_YELLOW << "Trying to repair with no energy:" << C_RESET << std::endl;
 	energyBot.beRepaired(1);
-
-	std::cout << C_CYAN << "\n=== KEY LEARNINGS ===" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• ClapTrap starts with 10 HP, 10 energy, 0 attack damage" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• Attack and repair consume 1 energy point each" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• Cannot attack or repair with 0 energy or when destroyed" << C_RESET << std::endl;
-	std::cout << C_RED << "• HP cannot go below 0 (unsigned int protection)" << C_RESET << std::endl;
-
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 09:52:54 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/21 14:04:38 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/08/12 14:46:17 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,12 +78,6 @@ int	main( void )
 	}
 	
 	strongBot.guardGate();
-
-	std::cout << C_CYAN << "\n=== KEY LEARNINGS ===" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• ScavTrap inherits from ClapTrap (IS-A relationship)" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• ScavTrap: 100 HP, 50 energy, 20 attack vs ClapTrap: 10 HP, 10 energy, 0 attack" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• ScavTrap has unique guardGate() function" << C_RESET << std::endl;
-	std::cout << C_RED << "• Inheritance allows code reuse while extending functionality" << C_RESET << std::endl;
 
 	return 0;
 }
