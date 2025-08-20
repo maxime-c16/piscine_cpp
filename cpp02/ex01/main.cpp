@@ -6,13 +6,12 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 18:02:12 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/20 18:28:14 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/08/11 11:29:35 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-// Color definitions for enhanced output
 #define C_GREEN "\033[32m"
 #define C_RESET "\033[0m"
 #define C_YELLOW "\033[33m"
@@ -78,14 +77,5 @@ int	main( void )
 	original.setRawBits(0);
 	std::cout << "After modifying original - original: " << original << ", copy: " << copy << std::endl;
 	std::cout << C_GREEN << "Copy remains unchanged - objects are independent!" << C_RESET << std::endl;
-
-	std::cout << C_CYAN << "\n=== KEY LEARNINGS ===" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• Fixed-point arithmetic: Stores fractional numbers as integers" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• 8 fractional bits: Precision = 1/256 ≈ 0.00390625" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• Constructor overloading: Different types (int, float) handled" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• Operator overloading: << operator for stream output" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• Type conversion: toInt() and toFloat() for compatibility" << C_RESET << std::endl;
-	std::cout << C_RED << "• Canonical form: Constructor, destructor, copy constructor, assignment" << C_RESET << std::endl;
-
 	return 0;
 }

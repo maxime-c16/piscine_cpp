@@ -6,7 +6,7 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 09:38:47 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/22 10:37:05 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/08/15 17:25:17 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ class Dog : public Animal
 		Brain*	getBrain( void ) const;
 
 	private:
-		std::string _type;
 		Brain*		_brain;
 };
 

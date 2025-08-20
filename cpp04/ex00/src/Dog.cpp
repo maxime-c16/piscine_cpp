@@ -6,7 +6,7 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 09:26:09 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/22 09:46:36 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/08/18 17:20:39 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Dog::Dog( void ) : Animal()
 {
+	_type = "Dog";
 	_type = "Dog";
 	std::cout << "Dog default constructor called" << std::endl;
 }

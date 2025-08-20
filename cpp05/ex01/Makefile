@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/07/22 09:20:42 by macauchy          #+#    #+#              #
-#    Updated: 2025/08/15 18:17:01 by macauchy         ###   ########.fr        #
+#    Created: 2025/07/25 11:41:25 by macauchy          #+#    #+#              #
+#    Updated: 2025/08/05 17:00:31 by macauchy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FILES	=	main.cpp Cure.cpp Ice.cpp MateriaSource.cpp AMateria.cpp \
-			Character.cpp
+FILES	=	main.cpp Bureaucrat.cpp Form.cpp
 
 SRC_DIR	=	src
 
-HEADER	=	AMateria.hpp ICharacter.hpp Ice.hpp Cure.hpp MateriaSource.hpp \
-			IMateriaSource.hpp Character.hpp
+SRCS	=	$(addprefix $(SRC_DIR)/, $(FILES))
+
+HEADER	=	Bureaucrat.hpp Form.hpp
 
 HEADER_DIR	=	include
 
@@ -32,7 +32,7 @@ CFLAGS	=	-Wall -Wextra -Werror -std=c++98 -g3
 
 RM	=	rm -rf
 
-NAME	=	interface
+NAME	=	bureaucrat
 
 all: $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 12:14:51 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/24 16:01:18 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/08/15 17:36:48 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,7 @@ AMateria::~AMateria( void )
 
 AMateria	&AMateria::operator=( const AMateria &ref )
 {
-	if (this != &ref)
-	{
-		_type = ref._type;
-	}
+	static_cast<void>(ref);
 	return *this;
 }
 

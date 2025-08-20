@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/macauchy/workflow/cercle4/piscine_cpp/cpp04/ex00/src",
-      "program": "/home/macauchy/workflow/cercle4/piscine_cpp/cpp04/ex00/src/build/Debug/outDebug",
+      "cwd": "/home/macauchy/workflow/cercle4/piscine_cpp/cpp02/ex03",
+      "program": "/home/macauchy/workflow/cercle4/piscine_cpp/cpp02/ex03/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

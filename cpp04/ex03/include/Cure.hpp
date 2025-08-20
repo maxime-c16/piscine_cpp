@@ -6,7 +6,7 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 12:34:55 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/22 12:49:43 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/08/15 17:37:26 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,6 @@ class Cure : public AMateria
 
 		AMateria *clone( void ) const;
 		void use( ICharacter &target );
-		
-	private:
-		std::string _type;
 };
 
 #endif

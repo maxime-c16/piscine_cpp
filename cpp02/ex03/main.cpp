@@ -6,7 +6,7 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 18:02:12 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/20 19:19:01 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/08/11 12:02:42 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	main( void )
 	std::cout << "Point (2, -1) inside triangle: " << C_RED << (Point::bsp(a, b, c, outside4) ? "YES" : "NO") << C_RESET << std::endl;
 
 	printTest("3: EDGE CASES - POINTS ON EDGES");
-	std::cout << C_YELLOW << "Testing points exactly on triangle edges (should return false)" << C_RESET << std::endl;
+	std::cout << C_YELLOW << "Testing points exactly on triangle edges (should return [ON EDGE/OUTSIDE])" << C_RESET << std::endl;
 
 	Point onEdge1(2.0f, 0.0f);
 	Point onEdge2(1.0f, 1.5f);
@@ -70,32 +70,10 @@ int	main( void )
 	std::cout << "Point (3, 1.5) on edge BC: " << C_YELLOW << (Point::bsp(a, b, c, onEdge3) ? "INSIDE" : "ON EDGE/OUTSIDE") << C_RESET << std::endl;
 
 	printTest("4: VERTICES TEST");
-	std::cout << C_MAGENTA << "Testing triangle vertices (should return false)" << C_RESET << std::endl;
+	std::cout << C_MAGENTA << "Testing triangle vertices (should return [ON VERTEX])" << C_RESET << std::endl;
 
 	std::cout << "Vertex A(0, 0): " << C_MAGENTA << (Point::bsp(a, b, c, a) ? "INSIDE" : "ON VERTEX") << C_RESET << std::endl;
 	std::cout << "Vertex B(4, 0): " << C_MAGENTA << (Point::bsp(a, b, c, b) ? "INSIDE" : "ON VERTEX") << C_RESET << std::endl;
 	std::cout << "Vertex C(2, 3): " << C_MAGENTA << (Point::bsp(a, b, c, c) ? "INSIDE" : "ON VERTEX") << C_RESET << std::endl;
-
-	printTest("5: DIFFERENT TRIANGLE SHAPES");
-	std::cout << C_CYAN << "Testing with a right triangle: D(0,0), E(3,0), F(0,4)" << C_RESET << std::endl;
-
-	Point d(0.0f, 0.0f);
-	Point e(3.0f, 0.0f);
-	Point f(0.0f, 4.0f);
-
-	Point rightInside(1.0f, 1.0f);
-	Point rightOutside(2.0f, 3.0f);
-
-	std::cout << "Point (1, 1) in right triangle: " << C_GREEN << (Point::bsp(d, e, f, rightInside) ? "YES" : "NO") << C_RESET << std::endl;
-	std::cout << "Point (2, 3) in right triangle: " << C_RED << (Point::bsp(d, e, f, rightOutside) ? "YES" : "NO") << C_RESET << std::endl;
-
-	std::cout << C_CYAN << "\n=== KEY LEARNINGS ===" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• BSP (Binary Space Partitioning): Geometric algorithm for point-in-triangle" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• Fixed-point precision: Ensures consistent calculations without floating errors" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• Barycentric coordinates: Uses area ratios to determine point position" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• Edge cases: Points on edges/vertices typically return false (strict inside)" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• Cross products: Mathematical foundation for determining point orientation" << C_RESET << std::endl;
-	std::cout << C_RED << "• Real-world applications: Computer graphics, collision detection, ray tracing" << C_RESET << std::endl;
-
 	return 0;
 }

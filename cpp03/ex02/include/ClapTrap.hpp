@@ -6,7 +6,7 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 09:40:54 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/21 12:44:54 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/08/12 16:43:34 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,6 @@ class ClapTrap
 		void	attack( const std::string &target );
 		void	takeDamage( unsigned int amount );
 		void	beRepaired( unsigned int amount );
-
-	protected:
-		std::string		_name;
-		unsigned int	_hitPoints;
-		unsigned int	_energyPoints;
-		unsigned int	_attackDamage;
 };
 
 #endif

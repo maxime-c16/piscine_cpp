@@ -6,7 +6,7 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 17:58:23 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/20 18:04:29 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/08/11 11:31:18 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ Fixed::Fixed(void) : _value(0)
 
 int Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
+	std::cout << "[getRawBits member function called] ";
 	return _value;
 }
 
 void Fixed::setRawBits(int const raw)
 {
-	std::cout << "setRawBits member function called" << std::endl;
+	std::cout << "[setRawBits member function called]" << std::endl;
 	_value = raw;
 }
 

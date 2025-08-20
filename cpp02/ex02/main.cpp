@@ -6,13 +6,12 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 18:02:12 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/20 18:58:03 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/08/11 11:41:51 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-// Color definitions for enhanced output
 #define C_GREEN "\033[32m"
 #define C_RESET "\033[0m"
 #define C_YELLOW "\033[33m"
@@ -73,19 +72,5 @@ int	main( void )
 	std::cout << "num1 = " << num1 << ", num2 = " << num2 << std::endl;
 	std::cout << "min(num1, num2) = " << C_GREEN << Fixed::min(num1, num2) << C_RESET << std::endl;
 	std::cout << "max(num1, num2) = " << C_GREEN << Fixed::max(num1, num2) << C_RESET << std::endl;
-
-	// Test const versions
-	const Fixed const_a(20.0f);
-	const Fixed const_b(30.0f);
-	std::cout << "const min(" << const_a << ", " << const_b << ") = " << C_GREEN << Fixed::min(const_a, const_b) << C_RESET << std::endl;
-
-	std::cout << C_CYAN << "\n=== KEY LEARNINGS ===" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• Arithmetic operators: +, -, *, / enable mathematical operations" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• Comparison operators: ==, !=, <, <=, >, >= enable sorting/comparing" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• Pre-increment (++obj): Increments then returns new value" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• Post-increment (obj++): Returns old value then increments" << C_RESET << std::endl;
-	std::cout << C_GREEN << "• Static functions: min/max work without object instances" << C_RESET << std::endl;
-	std::cout << C_RED << "• Operator overloading makes custom types behave like built-in types" << C_RESET << std::endl;
-
 	return 0;
 }

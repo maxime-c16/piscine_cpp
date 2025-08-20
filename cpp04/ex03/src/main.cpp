@@ -6,7 +6,7 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/25 11:36:01 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/25 11:36:56 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/08/15 18:28:04 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,22 @@
 #define CYAN    "\033[36m"
 #define RED     "\033[31m"
 
-static void printHeader(const std::string& test, int num) {
+static void printHeader(const std::string& test, int num)
+{
 	std::cout << CYAN << BOLD << "\n[TEST " << num << "] " << test << RESET << std::endl;
 	std::cout << "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" << std::endl;
 }
 
-static void printStatus(const std::string& message, bool success = true) {
+static void printStatus(const std::string& message, bool success = true)
+{
 	if (success)
 		std::cout << GREEN << "[PASS] " << RESET << message << std::endl;
 	else
 		std::cout << RED << "[FAIL] " << RESET << message << std::endl;
 }
 
-static void printSection(const std::string& section) {
+static void printSection(const std::string& section)
+{
 	std::cout << YELLOW << "▸ " << section << RESET << std::endl;
 }
 
@@ -56,7 +59,7 @@ int main()
 		delete iceTemplate;
 		delete cureTemplate;
 		
-		ICharacter* me = new Character("me");
+		ICharacter* me = new Character("alice");
 		AMateria* tmp;
 		
 		tmp = src->createMateria("ice");

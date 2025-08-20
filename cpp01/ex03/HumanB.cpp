@@ -6,13 +6,13 @@
 /*   By: macauchy <macauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 16:11:28 by macauchy          #+#    #+#             */
-/*   Updated: 2025/07/20 16:26:52 by macauchy         ###   ########.fr       */
+/*   Updated: 2025/08/05 11:37:56 by macauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name) : _name(name), _weapon(nullptr)
+HumanB::HumanB(std::string name) : _name(name), _weapon(NULL)
 {
 	std::cout << C_BLUE << _name << C_RESET << " has been created." << std::endl;
 }
